@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.color-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.color-button:focus {
+  box-shadow: none;
+}
+
+.color-button.selected {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgb(13 110 253 / 25%);
+}
+
+.button-add {
+  background-color: #86d22a;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  width: 80px;
+}
+
+.card {
+  overflow: hidden;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  border: none;
+}
+
+.card p {
+  margin: 10px;
+  overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.card .delete-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff77;
+}
+
+.card:hover .delete-button {
+  visibility: visible;
+}
+
+.card .show-full {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #000000cc;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card:hover .show-full {
+  visibility: visible;
 }

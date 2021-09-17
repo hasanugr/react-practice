@@ -16,17 +16,17 @@ let notes = [
   {
     id: nanoid(),
     title: "Note 1",
-    colorCode: "#444555",
+    colorId: "1",
   },
   {
     id: nanoid(),
     title: "Note 2",
-    colorCode: "#123666",
+    colorId: "2",
   },
   {
     id: nanoid(),
     title: "Note 3",
-    colorCode: "#888666",
+    colorId: "2",
   },
 ];
 
@@ -36,20 +36,10 @@ app.post("/notes", (req, res) => {
   const note = {
     id: nanoid(),
     title: req.body.title,
-    colorCode: req.body.colorCode,
+    colorId: req.body.colorId,
   };
   notes.push(note);
   return res.send(note);
-});
-
-app.patch("/notes/:id", (req, res) => {
-  const id = req.params.id;
-  const index = notes.findIndex((note) => note.id == id);
-  const isCompleted = Boolean(req.body.isCompleted);
-  if (index > -1) {
-    notes[index].isCompleted = isCompleted;
-  }
-  return res.send(notes[index]);
 });
 
 app.delete("/notes/:id", (req, res) => {
@@ -58,14 +48,6 @@ app.delete("/notes/:id", (req, res) => {
   if (index > -1) {
     notes.splice(index, 1);
   }
-
-  res.send(notes);
-});
-
-app.patch("/notes/", (req, res) => {
-  const ids = req.body.ids;
-  const filterednotes = notes.filter((item) => !ids.includes(item.id));
-  notes = filterednotes;
 
   res.send(notes);
 });
