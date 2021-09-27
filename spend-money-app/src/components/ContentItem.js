@@ -5,7 +5,7 @@ import {
   removeBasket,
   totalMoneySelector,
 } from "../redux/marketSlice";
-import priceBeauty from "./priceBeauty";
+import { priceBeauty } from "./priceBeauty";
 
 function ContentItem({ item }) {
   const dispatch = useDispatch();

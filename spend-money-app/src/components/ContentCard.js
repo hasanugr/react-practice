@@ -2,7 +2,7 @@ import {
   basketItemsSelector,
   spendedMoneySelector,
 } from "../redux/marketSlice";
-import priceBeauty from "./priceBeauty";
+import { priceBeauty, priceBeautySorter } from "./priceBeauty";
 import { useSelector } from "react-redux";
 
 function ContentCard() {
@@ -15,18 +15,19 @@ function ContentCard() {
         <div className="title">Your Receipt</div>
         <div className="cartList">
           {basketItems.map((item) => (
-            <div style={{ marginBottom: "15px" }}>
-              {item.title} x{item.quantity}{" "}
-              <strong style={{ color: "rgb(46, 204, 113)" }}>
-                ${priceBeauty(item.price * item.quantity)}
-              </strong>
+            <div className="card-item">
+              <div className="card-item-name">{item.title}</div>
+              <div className="card-item-quantity">{item.quantity}</div>
+              <div className="card-item-price">
+                ${priceBeautySorter(item.price * item.quantity)}
+              </div>
             </div>
           ))}
         </div>
         <hr />
-        <div className="cartList">
-          <strong>TOTAL:</strong>{" "}
-          <strong style={{ color: "rgb(46, 204, 113)" }}>
+        <div className="card-item">
+          <strong style={{ textAlign: "left" }}>TOTAL:</strong>{" "}
+          <strong style={{ textAlign: "left", color: "rgb(46, 204, 113)" }}>
             ${priceBeauty(spendedMoney)}
           </strong>
         </div>

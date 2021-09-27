@@ -69,6 +69,32 @@ body {
   margin-left: 15px;
 }
 
+.card-item {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+  grid-gap: 10px 0;
+  font-size: 18px;
+  grid-template-columns: 170px 45px 75px;
+}
+
+.card-item-name {
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.card-item-quantity {
+  text-align: left;
+}
+
+.card-item-price {
+  text-align: right;
+  color: #24c486;
+  font-weight: bold;
+}
+
 .section {
   max-width: 950px;
   font-size: 32px;
@@ -119,7 +145,6 @@ body {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  /* color: rgb(46, 204, 113); */
   font-weight: bold;
   padding: 15px;
 }
