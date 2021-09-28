@@ -14,6 +14,12 @@ function Form() {
 
     if (!name || !number) return false;
 
+    // const names = name.split(",");
+    // const namesMapping = names.map((name) => {
+    //   id: nanoid(), name;
+    // });
+    // dispatch(addContact(namesMapping));
+
     dispatch(addContact({ id: nanoid(), name: name, phone_number: number }));
     setName("");
     setNumber("");
