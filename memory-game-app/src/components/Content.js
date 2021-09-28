@@ -59,7 +59,7 @@ function Content() {
       </div>
       {completedCardsCount === totalCards && completedCardsCount > 10 && (
         <>
-          <div className="modal-bg"></div>
+          <div className="modal-bg" />
           <div
             className="modal-button"
             onClick={() => ShuffleAndStartGame(1000, true)}

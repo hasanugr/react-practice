@@ -33,7 +33,7 @@ function ContentForm() {
             value={noteText}
             onChange={(e) => setNoteText(e.target.value)}
             disabled={isLoading}
-          ></textarea>
+           />
           <label htmlFor="floatingTextarea">Enter your note here...</label>
           {isLoading && <Loading />}
           {error && <Error message={error} />}
