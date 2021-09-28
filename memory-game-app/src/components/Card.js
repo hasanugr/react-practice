@@ -21,7 +21,7 @@ function Card({ item }) {
   const clickHandle = () => {
     if (!isClickable) return false;
 
-    console.log("1 ->", item.name);
+    
     dispatch(updateCard({ id: item.id, changes: { isOpen: true } }));
     if (openedCard.length > 0) {
       dispatch(changeOpenedCard([...openedCard, { ...item, isOpen: true }]));
@@ -32,12 +32,12 @@ function Card({ item }) {
     } else {
       dispatch(changeOpenedCard([{ ...item, isOpen: true }]));
     }
-    console.log("2 ->", item.name);
+    
   };
 
   const checkMatch = () => {
-    console.log("UPDATED.!!");
-    console.log(openedCard);
+    
+    
     const checkResult =
       openedCard[0].name === item.name && openedCard[0].id !== item.id;
 
