@@ -44,7 +44,7 @@ export const removeTodoAsync = createAsyncThunk(
 export const removeCompletedTodosAsync = createAsyncThunk(
   "todos/removeCompletedTodosAsync",
   async (data) => {
-    console.log(data);
+    
     const res = await axios.patch(
       `${process.env.REACT_APP_API_BASE_ENDPOINT}/todos`,
       data

@@ -78,4 +78,4 @@ app.patch("/todos/", (req, res) => {
 
 const PORT = 7000;
 
-app.listen(PORT, console.log(`Server running on port ${PORT}`.green.bold));
+app.listen(PORT, );
