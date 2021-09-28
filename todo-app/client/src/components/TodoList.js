@@ -52,7 +52,7 @@ function TodoList() {
             <button
               className="destroy"
               onClick={() => handleDestroy(item.id)}
-            ></button>
+             />
           </div>
         </li>
       ))}
